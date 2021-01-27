@@ -10,17 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Random;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Controller
 public class ChoiceController {
-    //JRadioButton radioButton = new JRadioButton(
-            //"<html>Show options before adding<br>to version control</html>");
-
-
-
-    List<Choice> choices = new ArrayList<Choice>();
 
     @GetMapping("/")
     public String index() {
@@ -28,24 +21,30 @@ public class ChoiceController {
     }
 
     @PostMapping("/game")
-    public String processChoice(Model model, @RequestParam int rock, @RequestParam int paper,
-                                  @RequestParam int scissors){
+    public String processChoice(Model model, @RequestParam int value){
 
         Random rn = new Random();
-        for(int i =0; i < 1; i++)
+        int cAnswer = 0;
+        for(int i=0; i < 1; i++)
         {
             int answer = rn.nextInt(3) + 1;
+            cAnswer = answer;
         }
 
-
-        //int total = grommets.size();
-        //int bonusGrommets = total/20;
-
-        //for (int i=1; i<=bonusGrommets; i++)
-            //grommets.add(new Grommet("Pink", "#"));
-
-        //model.addAttribute("grommetList", grommets);
-
-        return "output";
+        if (cAnswer > value)
+        {
+            model.addAttribute("winner", "you win");
+            return "output";
+        }
+        else if (cAnswer < value)
+        {
+            model.addAttribute("winner", "you lose");
+            return "output";
+        }
+        else
+        {
+            model.addAttribute("winner", "tie");
+            return "output";
+        }
     }
 }
