@@ -28,17 +28,17 @@ public class Game {
         if (userChoice == computerChoice)//0=paper 1=rock 2=scissors
             winner = "It was a tie :/";
         else if (userChoice == 0 && computerChoice == 2)
-            winner = "You chose paper and the computer chose scissors, scissors cut paper. You lose :(";
+            winner = "You picked paper and the computer picked scissors, scissors cut paper. You lose :(";
         else if (userChoice == 0 && computerChoice == 1)
-            winner = "You chose paper and the computer chose rock, paper covers rock. You win :)";
+            winner = "You picked paper and the computer picked rock, paper covers rock. You win :)";
         else if (userChoice == 1 && computerChoice == 2)
-            winner = "You chose rock and the computer chose scissors, rock crushes scissors. You win :)";
+            winner = "You picked rock and the computer picked scissors, rock crushes scissors. You win :)";
         else if (userChoice == 1 && computerChoice == 0)
-            winner = "You chose rock and the computer chose paper, paper covers rock. You lose :(";
+            winner = "You picked rock and the computer picked paper, paper covers rock. You lose :(";
         else if (userChoice == 2 && computerChoice == 0)
-            winner = "You chose scissors and the computer chose paper, scissors cut paper. You win :)";
+            winner = "You picked scissors and the computer picked paper, scissors cut paper. You win :)";
         else if (userChoice == 2 && computerChoice == 1)
-            winner = "You chose scissors and the computer chose rock, rock crushes scissors. You lose :(";
+            winner = "You picked scissors and the computer picked rock, rock crushes scissors. You lose :(";
         else
             winner = "Invalid user input.";
     }
