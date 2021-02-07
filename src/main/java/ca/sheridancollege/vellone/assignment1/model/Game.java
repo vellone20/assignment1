@@ -26,19 +26,19 @@ public class Game {
 
     public void winner() {
         if (userChoice == computerChoice)//0=paper 1=rock 2=scissors
-            winner = "It was a draw";
+            winner = "It was a tie :/";
         else if (userChoice == 0 && computerChoice == 2)
-            winner = "Scissor cuts paper. You lose!!";
+            winner = "Scissor cut paper. You lose :(";
         else if (userChoice == 0 && computerChoice == 1)
-            winner = "Paper eats rock. You win!!";
+            winner = "Paper covers rock. You win :)";
         else if (userChoice == 1 && computerChoice == 2)
-            winner = "Rock crushes scissors. You win!!";
+            winner = "Rock crushes scissors. You win :)";
         else if (userChoice == 1 && computerChoice == 0)
-            winner = "Paper eats rock. You lose!!";
+            winner = "Paper covers rock. You lose :(";
         else if (userChoice == 2 && computerChoice == 0)
-            winner = "Scissor cuts paper. You win!!";
+            winner = "Scissor cut paper. You win :)";
         else if (userChoice == 2 && computerChoice == 1)
-            winner = "Rock breaks scissors. You lose!!";
+            winner = "Rock crushes scissors. You lose :(";
         else
             winner = "Invalid user input.";
     }
