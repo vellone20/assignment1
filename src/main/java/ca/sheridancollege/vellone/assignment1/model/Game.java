@@ -26,7 +26,7 @@ public class Game {
 
     public void winner() {
         if (userChoice == computerChoice)//0=paper 1=rock 2=scissors
-            winner = "It was a tie :/";
+            winner = "It was a tie, both parties pucked the same thing :/";
         else if (userChoice == 0 && computerChoice == 2)
             winner = "You picked paper and the computer picked scissors, scissors cut paper. You lose :(";
         else if (userChoice == 0 && computerChoice == 1)
