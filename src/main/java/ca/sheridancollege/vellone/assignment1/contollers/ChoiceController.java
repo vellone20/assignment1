@@ -24,6 +24,11 @@ public class ChoiceController {
         //System.out.println("userChoice:" + value);
         return modelAndView;
     }
+
+    @RequestMapping("/index")// routs to index
+    public String output(){
+        return "index";
+    }
 }
 
 
