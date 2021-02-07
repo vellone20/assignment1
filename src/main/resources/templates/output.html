@@ -2,10 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-<h1> Output Page </h1>
-<h2> Winner is <span th:text="${result}">any</span></h2>
+<h1> Results </h1>
+<form method="post">
+<p>Total: <span th:text="${game.getWinner()}"></span></p>
+</form>
 </body>
 </html>
