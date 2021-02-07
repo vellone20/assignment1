@@ -5,9 +5,15 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-<h1> Results </h1>
-<form method="post">
-<p>Total: <span th:text="${game.getWinner()}"></span></p>
+<h1>Game Finished</h1>
+<h3>Computers Hand:</h3>
+<img th:src="@{'images/' + ${game.getComputerChoice()} + '.png'}" alt="Computers Hand" width="150" height="150">
+<h3>Your Hand:</h3>
+<img th:src="@{'images/' + ${game.getUserChoice()} + '.png'}" alt="Your Hand" width="150" height="150">
+<form>
+    <label> </label><br>
+    <label> </label><br>
+<h3>Results: <span th:text="${game.getWinner()}"></span></h3>
 </form>
 </body>
 </html>

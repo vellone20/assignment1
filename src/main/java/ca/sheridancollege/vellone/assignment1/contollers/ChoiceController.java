@@ -21,7 +21,7 @@ public class ChoiceController {
         game.setUserChoice(value);//setting userChoice
         game.winner();//set winner
         modelAndView.addObject("game", game);//passes object to output
-        System.out.println("userChoice:" + value);
+        //System.out.println("userChoice:" + value);
         return modelAndView;
     }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>TODO supply a title</title>
+    <title>Rock, Paper, Scissors</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <style type="text/css">
@@ -11,16 +11,19 @@
     </style>
 </head>
 <body>
-<h1>Place your Grommet order here.</h1>
+<h1>Choose Your Hand</h1>
+<img src="images/1.png" alt="rock hand" width="200" height="200">
+<img src="images/0.png" alt="paper hand" width="200" height="200">
+<img src="images/2.png" alt="scissors hand" width="200" height="200">
 <form th:action="@{/output}">
-    <p>Please select your choice:</p>
     <input type="radio" th:id="paper" name="selection" th:value="0">
     <label>Paper</label><br>
-    <input type="radio" th:id="rock" th:name="selection" th:value="1">
+    <input type="radio" th:id="rock" name="selection" th:value="1">
     <label>Rock</label><br>
-    <input type="radio" th:id="scissors" th:name="selection" th:value="2">
+    <input type="radio" th:id="scissors" name="selection" th:value="2">
     <label>Scissors</label><br>
-    <input type="submit">
+    <label> </label><br>
+    <button type="submit">Play</button>
 </form>
 </body>
 </html>

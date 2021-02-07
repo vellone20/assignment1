@@ -21,7 +21,7 @@ public class Game {
         for (int i = 0; i < 1; i++) {
             this.computerChoice = rn.nextInt(3);
         }
-        System.out.println("computerChoice: " + computerChoice);
+        //System.out.println("computerChoice: " + computerChoice);
     }
 
     public void winner() {
