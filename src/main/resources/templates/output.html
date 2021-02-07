@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" th:href="@{style.css}">
 </head>
 <body>
 <h1>Game Finished</h1>
 <h3>Computers Hand:</h3>
-<img th:src="@{'images/' + ${game.getComputerChoice()} + '.png'}" alt="Computers Hand" width="150" height="150">
+<img th:src="@{'images/' + ${game.getComputerChoice()} + '.png'}" alt="Computers Hand">
 <h3>Your Hand:</h3>
-<img th:src="@{'images/' + ${game.getUserChoice()} + '.png'}" alt="Your Hand" width="150" height="150">
+<img th:src="@{'images/' + ${game.getUserChoice()} + '.png'}" alt="Your Hand">
 <form>
     <label> </label><br>
     <label> </label><br>
-<h3>Results: <span th:text="${game.getWinner()}"></span></h3>
+<h2>Results: <span th:text="${game.getWinner()}"></span></h2>
 </form>
 </body>
 </html>

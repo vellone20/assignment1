@@ -3,18 +3,13 @@
 <head>
     <title>Rock, Paper, Scissors</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <style type="text/css">
-        input[type=number] {
-            width:30px;
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{style.css}">
 </head>
 <body>
 <h1>Choose Your Hand</h1>
-<img src="images/1.png" alt="rock hand" width="200" height="200">
-<img src="images/0.png" alt="paper hand" width="200" height="200">
-<img src="images/2.png" alt="scissors hand" width="200" height="200">
+<img src="images/1.png" alt="rock hand">
+<img src="images/0.png" alt="paper hand">
+<img src="images/2.png" alt="scissors hand">
 <form th:action="@{/output}">
     <input type="radio" th:id="paper" name="selection" th:value="0">
     <label>Paper</label><br>
